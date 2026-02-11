@@ -29,6 +29,12 @@ O PAT é uma chave de acesso pessoal utilizada pra autenticar ações no Git e G
 
 ### Salvar em cache as credenciais do PAT
 
+A principal motivação para salvar o Personal Access Token (PAT) em cache é a conveniência e produtividade, eliminando a necessidade de inserir credenciais longas e complexas a cada interação com o repositório (push, pull, clone) via linha de comando. Além disso, é muito mais seguro do que guardar o PAT em um texto simples, pois o cache utiliza ferramentas do sistema operacional para protegê-lo.
 
+```bash
+# Execute na linha de comando para salvar por 1 hora (3600 segundos)
+
+git config --global credential.helper 'cache --timeout=3600'
+```
 
 ## Qual a diferença entre git merge e git rebase?
