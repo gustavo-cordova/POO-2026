@@ -38,3 +38,13 @@ git config --global credential.helper 'cache --timeout=3600'
 ```
 
 ## Qual a diferença entre git merge e git rebase?
+
+A principal diferença é que o **git merge** salva o histórico da linha do tempo ao integrar os commits, deixando marcado a sequência cronoólogica exata da criação de branches ("os galhos são preservados").
+
+Já o **git rebase** reescreve o histórico ao integrar os commits, fazendo com que tudo pareça ter sido feito em uma única linha ("os galhos são cortados, e todos os seus conteúdos se concentram no tronco principal").
+
+### Quando usar:
+
+- Use **git merge**: Quando precisar integrar branches de longa duração, manter o histórico preciso e seguro, ou em branches compartilhadas (ex: main ou develop).
+
+- Use **git rebase**: Quando quiser manter um histórico limpo, linear e sem merges desnecessários, ideal para branches de funcionalidades (feature branches) curtas antes de enviá-las (push).
