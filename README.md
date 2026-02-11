@@ -3,7 +3,7 @@
 
 # Atividades práticas da disciplina de Programação Orientada a Objetos.
 
-Repositório com atividades práticas da disciplin de Programação Orientada a Objetos
+Repositório com atividades práticas da disciplina de Programação Orientada a Objetos
 
 ## Laboratórios
 
