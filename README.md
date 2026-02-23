@@ -12,3 +12,5 @@ Repositório com atividades práticas da disciplina de Programação Orientada a
 ## Aulas
 
 * [Aula 01](aula-01) - Introdução à linguagem Java
+
+* [Aula 04](aula-04) - Introdução à POO / Início da prática com Java
