@@ -1,5 +1,7 @@
 void main() {
 
+    //caso1
+
     int i = 10;
     String resultado = "Iniciando";
 
@@ -22,6 +24,8 @@ void main() {
     }
 
     IO.println(resultado);
+
+    //caso 2
 
     String s = switch(i) {
         case 1 -> "um";
