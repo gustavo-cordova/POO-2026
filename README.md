@@ -14,3 +14,6 @@ Repositório com atividades práticas da disciplina de Programação Orientada a
 * [Aula 01](aula-01) - Introdução à linguagem Java
 
 * [Aula 04](aula-04) - Introdução à POO / Início da prática com Java
+
+* [Aula 05](aula-05) - parseInt, parseDouble / Introdução à Intelij e Gradle
+
