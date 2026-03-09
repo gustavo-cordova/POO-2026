@@ -10,12 +10,24 @@ public class App {
     public static void main(String[] args) {
 
         int dia = Integer.parseInt(IO.readln("Entre com o dia: "));
+
         String mes = IO.readln("Entre com o mẽs: ");
 
-        LocalDate data = LocalDate.parse(mes);
+        String estacao = switch (mes.toLowerCase()) {
+            case "janeiro", "fevereiro" -> "Verão";
+            case "marco", "março" -> (dia < 20) ? "Verão" : "Outono";
+            case "abril", "maio" -> "Outono";
+            case "junho" -> (dia < 21) ? "Outono" : "Inverno";
+            case "julho", "agosto" -> "Inverno";
+            case "setembro" -> (dia < 22) ? "Inverno" : "Primavera";
+            case "outubro", "novembro" -> "Primavera";
+            case "dezembro" -> (dia < 21) ? "Primavera" : "Verão";
+            default -> "";
+        };
 
+        IO.println("É " + estacao + " na data informada, no hemisfério Sul");
+        }
 
 
     }
 
-}
