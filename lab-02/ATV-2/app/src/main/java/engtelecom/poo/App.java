@@ -11,18 +11,26 @@ public class App {
     public static void main(String[] args) {
 
         Random r = new Random();
-        int sorteado = r.nextInt(100);
+        int numeroSorteado = r.nextInt(100) + 1;
 
         int userPick = Integer.parseInt(IO.readln("Acerte o número!: "));
 
-        int contadorTentativas = 0;
+        int contadorTentativas = 1;
 
-        while (sorteado != userPick){
-            IO.println("Você errou, tente novamente.");
-            return;
+        while (numeroSorteado != userPick) {
+
+            if (numeroSorteado < userPick) {
+                contadorTentativas++;
+                userPick = Integer.parseInt(IO.readln("O número é MENOR. Tente novamente: "));
+            }
+
+            if (numeroSorteado > userPick) {
+                contadorTentativas++;
+                userPick = Integer.parseInt(IO.readln("O número é MAIOR. Tente novamente: "));
+            }
+
         }
 
-//        if (sorteado == userPick) {
-//            IO.println("Parabéns, você acertou!: " + sorteado);
-        }
+        IO.println("Parabéns, você acertou! Total de tentativas:  " + contadorTentativas);
     }
+}
