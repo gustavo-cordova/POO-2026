@@ -40,7 +40,16 @@ public class Main {
 
 
 
-        }
-
     }
-}
+
+        public static void fazTriangulo(tamanhoTriangulo int tamanhoTriangulo){
+
+            for (int linha = 1; linha <= tamanhoTriangulo ; linha++) {
+                for (int coluna = 1; coluna <= linha ; coluna++) {
+                    System.out.print("*");
+                }
+                System.out.println();
+            }
+
+        }
+    }
