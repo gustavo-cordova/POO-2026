@@ -6,6 +6,7 @@ public class Lampada {
     private boolean ligada = false;
 
     // Métodos
+
     public void ligar() {
         ligada = true;
     }
@@ -19,18 +20,10 @@ public class Lampada {
     }
 
     public void ligaDesliga () {
-
         ligada = !ligada;
-
-        //if (ligada == true){
-//            ligada  = false;
-//        }
-//        else {
-//           ligada = true;
-        }
-
-
     }
+
+}
 
 
 

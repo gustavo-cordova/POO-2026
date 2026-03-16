@@ -7,14 +7,40 @@ public class App {
 
     public static void main(String[] args) {
 
-        Lampada a = new Lampada();
-        Lampada b = new Lampada();
+//        Lampada a = new Lampada();
+//        Lampada b = new Lampada();
+//
+//
+//        System.out.println(a.isLigada());;
+//        a.ligaDesliga();
+//        System.out.println(a.isLigada());
+//        System.out.println(b.isLigada());
 
 
-        System.out.println(a.isLigada());;
-        a.ligaDesliga();
-        System.out.println(a.isLigada());
-        System.out.println(b.isLigada());
+        Caneta bic = new Caneta();
+        bic.setCor("azul");
+        IO.println(bic.getCor());
+
+
+        bic.abreFechaTampa();
+        IO.println(bic.istampaAberta());
+        bic.abreFechaTampa();
+
+        bic.setNivelTinta(100);
+        IO.println(bic.desenhar(2, 2, 4, 2));
+
+        IO.println(bic.getNiveltinta()
+);
+
+
+
+
+
+
+
+
+
+
 
 
     }
