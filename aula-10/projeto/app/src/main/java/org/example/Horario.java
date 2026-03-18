@@ -18,18 +18,45 @@ public class Horario {
     public void setHorario(int h, int m, int s){
 
         if (h < 0 || h > HORA_MAXIMA) {
-            IO.println("Hora errada. Apenas valores de 00 a 23");
+            return;
         }
         if (m < 0 || m > MINUTO_MAXIMO) {
-            IO.println("Minuto errado. Apenas valores de 00 a 59");
+            return;
         }
         if (s < 0 || s > SEGUNDO_MAXIMO) {
-            IO.println("Segundo errado. Apenas valores de 00 a 59");
+            return;
         }
         this.hora = h;
         this.minuto = m;
         this.segundo = s;
     }
+
+    public void setHorario(int h, int m){
+        this.setHorario(h, m, 0);
+    }
+
+    public void setHorario(int h){
+        this.setHorario(h, 0, 0);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public int getHora() {
         return hora;

@@ -7,11 +7,22 @@ public class App {
 
     public static void main(String[] args) {
 
-        Contador contador = new Contador();
+//        Contador contador = new Contador();
+//
+//        contador.setContador(14);
+//        contador.incrementaContador();
+//
+//        IO.println(contador.getContador());
 
-        contador.setContador(14);
-        contador.incrementaContador();
-        contador.getContador();
+
+        Personagem pedro = new Personagem();
+
+        pedro.upparMagic(3);
+        pedro.upparPower(2);
+        pedro.upparSpeed(4);
+        IO.println(pedro);
+        pedro.upparMagic(1);
+        IO.println(pedro);
 
     }
 }
