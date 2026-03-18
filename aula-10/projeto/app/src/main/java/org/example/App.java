@@ -10,9 +10,8 @@ public class App {
 
         Horario h = new Horario();
 
-        h.setHorario(24,30,40);
+        h.setHorario(23,40,40);
 
-        IO.println(h);
 
 
 

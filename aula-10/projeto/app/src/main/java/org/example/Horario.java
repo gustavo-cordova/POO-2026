@@ -15,12 +15,31 @@ public class Horario {
         return String.format ("%02d:%02d:%02d", hora, minuto, segundo);
     }
 
-    public int setHorario(int h, int m, int s){
-        this.hora = h; if (h > HORA_MAXIMA) return h;
-        this.minuto = m; if (m > MINUTO_MAXIMO) return m;
-        this.segundo = s; if (s > SEGUNDO_MAXIMO) return s;
-        return s;
+    public void setHorario(int h, int m, int s){
+
+        if (h < 0 || h > HORA_MAXIMA) {
+            IO.println("Hora errada. Apenas valores de 00 a 23");
+        }
+        if (m < 0 || m > MINUTO_MAXIMO) {
+            IO.println("Minuto errado. Apenas valores de 00 a 59");
+        }
+        if (s < 0 || s > SEGUNDO_MAXIMO) {
+            IO.println("Segundo errado. Apenas valores de 00 a 59");
+        }
+        this.hora = h;
+        this.minuto = m;
+        this.segundo = s;
     }
 
+    public int getHora() {
+        return hora;
+    }
 
+    public int getMinuto() {
+        return minuto;
+    }
+
+    public int getSegundo() {
+        return segundo;
+    }
 }
