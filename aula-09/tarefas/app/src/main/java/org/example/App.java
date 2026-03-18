@@ -7,7 +7,11 @@ public class App {
 
     public static void main(String[] args) {
 
+        Contador contador = new Contador();
 
+        contador.setContador(14);
+        contador.incrementaContador();
+        contador.getContador();
 
     }
 }
