@@ -11,7 +11,7 @@ Repositório com atividades práticas da disciplina de Programação Orientada a
 
 * [Laboratório 02](lab-02) - Prática com linguagem Java em projetos Gradle
 
-* [Laboratório 03](lab-03) - Prática com linguagem Java em projetos Gradle
+* [Laboratório 03](lab-03) - Prática com construtor, modificadores, sobrecarga, membros estáticos e finais
 
 ## Aulas
 
