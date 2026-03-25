@@ -7,9 +7,12 @@ public class App {
 
     public static void main(String[] args) {
 
-        Horario h = new Horario(23,0,80);
+        Horario h = new Horario(21,19,18);
 
         IO.println(h);
+
+        IO.println(h.paraExtenso());
+
 
 
 

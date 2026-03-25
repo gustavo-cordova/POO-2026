@@ -10,7 +10,7 @@ public class Horario {
         this.hora = 0;
         this.minuto = 0;
         this.segundo = 0;
-    };
+    }
 
     public Horario(int hora, int minuto, int segundo) {
         if (!(this.setHora(hora) && this.setMinuto(minuto) && this.setSegundo(segundo))){
@@ -55,11 +55,12 @@ public class Horario {
 
     @Override
     public String toString() {
-        return String.format ("%02d:%02d:%02d", hora, minuto, segundo);    }
-}
+        return String.format ("%02d:%02d:%02d", hora, minuto, segundo);
+    }
 
     private String converterParaExtenso (int valor){
-        switch (){
+
+        return switch (valor) {
             case 1 -> "um";
             case 2 -> "dois";
             case 3 -> "três";
@@ -80,15 +81,24 @@ public class Horario {
             case 18 -> "dezoito";
             case 19 -> "dezenove";
 
+            case 20 -> "vinte";
+            case 30 -> "trinta";
+            case 40 -> "quarenta";
+            case 50 -> "cinquenta";
 
+            default -> "";
+        };
 
-            case 20 -> "vinte"
     }
 
-    public String paraExtendo(){
+    public String paraExtenso(){
             int horasDezenas = (this.hora / 10) * 10;
-            int horaUnidades = (this.hora % 10;
+            int horaUnidades = (this.hora % 10);
 
             String h = (this.hora == 1) ? "uma" : (this.hora == 2) ? "duas" : (hora < 20) ?
-            converterParaExtenso(hora):converterParaExtenso(horasDezenas) + " " + converterParaExtenso(horaUnidades);
-        };
+            converterParaExtenso(hora):converterParaExtenso(horasDezenas) + " e " + converterParaExtenso(horaUnidades) + " horas";
+
+            return h;
+    }
+
+}
