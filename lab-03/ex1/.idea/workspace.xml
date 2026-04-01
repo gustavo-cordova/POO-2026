@@ -4,7 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5916412b-006f-4292-8791-227a26080389" name="Changes" comment="" />
+    <list default="true" id="5916412b-006f-4292-8791-227a26080389" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../aula-04/Quarto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../aula-04/Quarto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../aula-04/Terceiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../aula-04/Terceiro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../aula-05/aula.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../aula-05/aula.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../aula-05/media.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../aula-05/media.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../aula-06/Argumentos.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../aula-06/Argumentos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../aula-06/segundo/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../aula-06/segundo/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../aula-06/segundo/app/src/main/java/engtelecom/poo/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../aula-06/segundo/app/src/main/java/engtelecom/poo/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../aula-08/projeto/app/src/main/java/engtelecom/poo/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../aula-08/projeto/app/src/main/java/engtelecom/poo/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../aula-09/tarefas/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../aula-09/tarefas/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../aula-09/tarefas/app/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../aula-09/tarefas/app/src/main/java/org/example/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../aula-10/projeto/app/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../aula-10/projeto/app/src/main/java/org/example/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../aula-10/projeto/app/src/main/java/org/example/Horario.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../aula-10/projeto/app/src/main/java/org/example/Horario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab-02/ATV-1/app/src/main/java/engtelecom/poo/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab-02/ATV-1/app/src/main/java/engtelecom/poo/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab-02/ATV-3/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab-02/ATV-3/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab-02/ATV-3/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab-02/ATV-3/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex3/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex3/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex3/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex3/.idea/misc.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,10 +44,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="/opt/gradle/gradle-9.2.1" javaHome="/usr/java/jdk-25-oracle-x64" gradleVersion="9.2.1" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "gustavo-cordova"
+  }
 }]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/gustavo-cordova/POO-2026",
+    "accountId": "54256296-f367-40b6-be83-c4c049789467"
+  }
+}]]></component>
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="/opt/gradle/gradle-9.2.1" javaHome="/usr/java/jdk-25-oracle-x64" gradleVersion="9.2.1" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="3BLK97h5ZjDeX4i0LBKDnilEqVg" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -39,10 +70,12 @@
     "Gradle.ex1 [:app:org.example.App.main()].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/aluno/POO-2026/lab-03/ex2",
+    "last_opened_file_path": "/home/gustavo-cordova/POO-2026/lab-03/ex3",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -62,6 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1774262762096</updated>
       <workItem from="1774262763651" duration="2119000" />
+      <workItem from="1774833029400" duration="872000" />
     </task>
     <servers />
   </component>

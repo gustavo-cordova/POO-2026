@@ -9,7 +9,7 @@ void main() {
     // IO.println(media);
 
 
-    double [] notas = new double[4];
+    double notas [] = new double[4];
 
     for (int i = 0; i < notas.length; i++) {
         notas[i] = Double.parseDouble (IO.readln("Entre com a " + (i+1) + " nota: "));

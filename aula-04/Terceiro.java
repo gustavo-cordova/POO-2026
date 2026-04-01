@@ -2,7 +2,7 @@ void main() {
 
     //caso1
 
-    int i = 10;
+    int i = 2;
     String resultado = "Iniciando";
 
     switch (i) {

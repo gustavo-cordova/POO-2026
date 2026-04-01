@@ -32,11 +32,16 @@ public class Horario {
     }
 
     public void setHorario(int h, int m){
+
         this.setHorario(h, m, 0);
     }
 
     public void setHorario(int h){
         this.setHorario(h, 0, 0);
+    }
+
+    public void setHorario(){
+        this.setHorario(0,0,0);
     }
 
 

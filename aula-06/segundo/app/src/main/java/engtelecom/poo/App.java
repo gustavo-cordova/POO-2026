@@ -10,8 +10,8 @@ public class App {
     public static void main(String[] args) {
 
 
-        System.out.println(args[0]);
-        System.out.println(args[1]);
+//        System.out.println(args[0]);
+//        System.out.println(args[1]);
 
 
 
@@ -28,8 +28,6 @@ public class App {
 //        char c = a.charAt(0);
 //        String d = "Eng" + "enharia " + b + " " + a + " " + i + " " + c;
 //        System.out.println(d);
-
-//
 //        if (a.equalsIgnoreCase("poo")) {
 //            System.out.println("iguais");
 //        }

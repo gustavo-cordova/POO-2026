@@ -1,15 +1,16 @@
-//void main (){
+// void main (){
 
-    // int[] vetor = new int[3];
+//     int[] vetor = new int[3];
 
-    // vetor[0] = 10;
-    // vetor[1] = 2;
-    // vetor[2] = 5;
+//     vetor[0] = 10;
+//     vetor[1] = 2;
+//     vetor[2] = 5;
 
 
-    // int [][] matriz = new int[2][3];
+//     int [][] matriz = new int[2][3];
 
-    // matriz [1][2] = 10;
+//     matriz [1][2] = 10;
+
 
 void main (){
 
@@ -33,5 +34,6 @@ void main (){
             }
 
         IO.println();
-    }   
+    }
+
 }

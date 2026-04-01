@@ -7,12 +7,14 @@ public class App {
 
     public static void main(String[] args) {
 
-        Ponto a = new Ponto(1, 1);
+        Ponto a = new Ponto(4, 10);
 
-        Ponto b = new Ponto(3, 2);
+        Ponto b = new Ponto(3, 20);
 
         IO.println(a);
         IO.println(b);
+
+        IO.println(a.getY());
 
         IO.println(a.distancia(b));
 

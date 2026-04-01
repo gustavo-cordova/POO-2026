@@ -8,12 +8,18 @@ public class App {
     public static void main(String[] args) {
 
 
-        Horario h = new Horario();
-
-        h.setHorario(40,40,40);
-        IO.println(h);
-
-//        h.setHorario(03);
+//        Horario h = new Horario();
+//
+//        h.setHorario(13,40,40);
+//        IO.println(h);
+//
+//        h.setHorario(3,2);
+//        IO.println(h);
+//
+//        h.setHorario(3,2);
+//        IO.println(h);
+//
+//        h.setHorario(3, 5);
 //        IO.println(h);
 
 
@@ -26,13 +32,13 @@ public class App {
 
 
 
-//        Carro fusca = new Carro("Fusca", 80);
+        Carro fusca = new Carro("Fusca", 80);
 //        Carro fusca2 = new Carro("Fusca");
-//
-//        Carro lambo = new Carro("Lambo", 400);
-//
-//
-//        IO.println(fusca);
+
+        Carro lamborghini = new Carro("Lambo", 400);
+
+
+        IO.println(lamborghini.modelo + " " + lamborghini.acelerar(200));
 
 
 

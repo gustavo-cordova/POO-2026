@@ -23,7 +23,7 @@ public class App {
 
 
         bic.abreFechaTampa();
-        IO.println(bic.istampaAberta());
+//        IO.println(bic.istampaAberta());
         bic.abreFechaTampa();
 
         bic.setNivelTinta(100);

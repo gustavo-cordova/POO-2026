@@ -9,7 +9,7 @@ public class App {
 
 //        Contador contador = new Contador();
 //
-//        contador.setContador(14);
+//        contador.setContador(16);
 //        contador.incrementaContador();
 //
 //        IO.println(contador.getContador());
@@ -22,6 +22,7 @@ public class App {
         pedro.upparSpeed(4);
         IO.println(pedro);
         pedro.upparMagic(1);
+        pedro.upparPower(5);
         IO.println(pedro);
 
     }

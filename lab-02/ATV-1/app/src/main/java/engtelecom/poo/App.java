@@ -14,6 +14,7 @@ public class App {
         String mes = IO.readln("Entre com o mẽs: ");
 
         String estacao = switch (mes.toLowerCase()) {
+
             case "janeiro", "fevereiro" -> "Verão";
             case "marco", "março" -> (dia < 20) ? "Verão" : "Outono";
             case "abril", "maio" -> "Outono";
@@ -24,6 +25,8 @@ public class App {
             case "dezembro" -> (dia < 21) ? "Primavera" : "Verão";
             default -> "";
         };
+
+
 
         IO.println("É " + estacao + " na data informada, no hemisfério Sul");
         }
