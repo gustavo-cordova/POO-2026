@@ -16,13 +16,19 @@ public class App {
 
     public void menu(int opcao){
 
+        int op;
+        do{
+            op = Integer.parseInt(IO.readln("Entre com a opção: "));
+        }
+        while (op!=5);
+
         // TODO implementar switch case
 
         String n = IO.readln("Entre com o nome do titular: ");
         String num = IO.readln("Entre com o numero da conta: ");
         double s = Double.parseDouble(IO.readln("Entre com o saldo: "));
 
-       switch (opcao) {
+       switch (op) {
            case 1 -> {
                Conta c = new Conta(n, num, s);
                contas.add(c);
@@ -32,17 +38,20 @@ public class App {
            }
            case 3 -> {
                contas.forEach(elemento ->{
-                   if (elemento.getNumero().equals(num)){
-                       elemento.depositar(s);
-                   }
-               });
+                    for (Conta c : this.contas) {
+                        if (elemento.getNumero().equals(num)) {
+                            elemento.depositar(s);
+                            break;
+                        }
+                    }});
            }
            case 4 -> {
                contas.forEach(elemento ->{
-                   if (elemento.getNumero().equals(num)){
+                   for (Conta c : this.contas) {
+                       if (elemento.getNumero().equals(num)){
                        elemento.sacar(s);
                    }
-               });
+               }});
            }
            case 5 -> {
                 
@@ -102,7 +111,7 @@ public class App {
 //        lista.removeIf(elemento -> elemento.equals("Maria"));
 //        IO.println(lista);
 
-        //Menu com 3 opcoes
+        //Menu com 5 opcoes
         // 1 - Criar conta
         // 2 - listar todas contas
         // 3 - Depositar

@@ -18,7 +18,7 @@ public class Conta {
     }
 
     public double depositar(double valor){
-        this.saldo = (valor > saldo) ? 0 : saldo - valor;
+        this.saldo = (valor > saldo) ? 0 : saldo + valor;
         return this.saldo;
     }
 
