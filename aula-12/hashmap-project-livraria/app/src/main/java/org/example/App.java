@@ -23,13 +23,13 @@ public class App {
         acervo.put(b.getiSBN(), b);
         acervo.put(c.getiSBN(), c);
 
-        acervo.forEach( (k, v)-> {
+        acervo.forEach((k, v) -> {
 
             IO.println(String.format("Chave: %s\nValor: %s\n", k, v));
 
         });
 
-        for(Livro livro : acervo.values()){
+        for (Livro livro : acervo.values()) {
             IO.println(livro);
         }
 
@@ -44,7 +44,32 @@ public class App {
         7 - Sair
          */
 
+        boolean executando;
 
+        while (executando = true) {
+            IO.println("""
+                    Menu de Gerenciamento da Livraria
+                    
+                    Selecione uma das opções abaixo:
+                    
+                    1 - Cadastrar Livro, sem iSBM duplicado
+                    2 - Listar iSBN de todos os livros
+                    3 - Consultar livro por iSBN e imprimir todos os dados do livro
+                    4 - Consultar livro por autor e imprimir todos os dados do(s) livros
+                    5 - Atualizar dados de um livro
+                    6 - Remover um livro pelo iSBN
+                    7 - Sair
+                    
+                    """);
+            String opcao = IO.readln();
+
+            switch (opcao) {
+
+                case "1":
+            }
+
+
+        }
     }
 
 
@@ -77,5 +102,39 @@ public class App {
             Livro l = acervo.get(iSBN);
             IO.println(l);
         }
+    }
+
+    public void consultarAutor(){
+        String autor = IO.readln("Entre com o o nome do autor: ");
+
+        if (acervo.containsKey(autor)){
+            IO.println(acervo.get(autor));
+        }
+    }
+
+    public void atualizarDados() {
+        String iSBN = IO.readln("Para atualizar os dados, primeiro entre com o iSBN do livro escolhido: ");
+
+        Livro j = acervo.get(iSBN);
+        if (!acervo.containsKey(iSBN)) {
+            IO.println("Livro não encontrado");
+        }
+        else {
+            int opcao = 0;
+            switch (opcao){
+                case 1 -> j.setTitulo(IO.readln("Insira o novo título: "));
+
+                case 2 -> j.setAutor(IO.readln("Insira o novo autor: "));
+
+                case 3 -> j.setAno(Integer.parseInt(IO.readln("Insira o novo ano: ")));
+
+            }
+        }
+    }
+
+    public void removerLivro(){
+        String iSBN = IO.readln("Entre com o iSBN: ");
+        Livro p = acervo.get(iSBN);
+        acervo.remove(p);
     }
 }
