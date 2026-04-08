@@ -68,7 +68,6 @@ public class App {
                     5 - Atualizar dados de um livro
                     6 - Remover um livro pelo iSBN
                     7 - Sair
-                    
                     """);
             String opcao = IO.readln("Selecione a opção desejada: ");
 
@@ -86,7 +85,10 @@ public class App {
 
                 case "6" -> app.removerLivro();
 
-                case "7" ->
+                case "7" -> {
+                    IO.println("Saindo do menu...");
+                    executando = false;
+                }
             }
 
 
@@ -106,13 +108,13 @@ public class App {
     }
 
     public void listar(){
-        acervo.forEach((k, v) ->
-                IO.println(String.format("Chave: %s\n", k)));
+//        acervo.forEach((k, v) ->
+//                IO.println(String.format("Chave: %s\n", k)));
 
         // ou
 
         for(String isbn : acervo.keySet()){
-            IO.println(isbn);
+            IO.println("Chave: " + isbn);
         }
     }
 
@@ -121,7 +123,9 @@ public class App {
 
         if (acervo.containsKey(iSBN)){
             Livro l = acervo.get(iSBN);
-            IO.println(l);
+            IO.println("Nome do livro: " + l.getTitulo());
+            IO.println("Nome do autor: " + l.getAutor());
+            IO.println("Ano de publicação: " + l.getAno());
         }
     }
 
@@ -130,7 +134,7 @@ public class App {
 
         for (Livro livro : acervo.values()) {
             if (livro.getAutor().equals(autor)){
-                IO.println(livro);
+                IO.println("iSBN: " + livro.getiSBN() + " / Nome do livro: " + livro.getTitulo() + " / Ano de lançamento: " + livro.getAno());
             }
         }
     }
@@ -163,12 +167,12 @@ public class App {
     public void removerLivro(){
         String iSBN = IO.readln("Entre com o iSBN para remover: ");
         if (acervo.containsKey(iSBN)) {
-            Livro p = acervo.get(iSBN);
-            acervo.remove(p);
+            acervo.remove(iSBN);
             IO.println("Livro " + iSBN + " removido da livraria");
         }
         else{
             IO.println("Livro não encontrado");
+
         }
     }
 }
