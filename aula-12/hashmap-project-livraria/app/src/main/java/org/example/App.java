@@ -3,7 +3,10 @@
  */
 package org.example;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 public class App {
 
@@ -33,6 +36,14 @@ public class App {
             IO.println(livro);
         }
 
+        List<String> lista = Arrays.asList("Java", "Stream", "API", "Collections");
+
+        for (String lista2 : lista){
+
+            int maior;
+
+        }
+
 
         /*
         1 - Cadastrar Livro, sem iSBM duplicado
@@ -44,14 +55,12 @@ public class App {
         7 - Sair
          */
 
-        boolean executando;
+        boolean executando = true;
 
-        while (executando = true) {
+        while (executando) {
             IO.println("""
                     Menu de Gerenciamento da Livraria
-                    
-                    Selecione uma das opções abaixo:
-                    
+                                        
                     1 - Cadastrar Livro, sem iSBM duplicado
                     2 - Listar iSBN de todos os livros
                     3 - Consultar livro por iSBN e imprimir todos os dados do livro
@@ -61,11 +70,23 @@ public class App {
                     7 - Sair
                     
                     """);
-            String opcao = IO.readln();
+            String opcao = IO.readln("Selecione a opção desejada: ");
 
             switch (opcao) {
 
-                case "1":
+                case "1" -> app.cadastrarLivro();
+
+                case "2" -> app.listar();
+
+                case "3" -> app.consultarISBN();
+
+                case "4" -> app.consultarAutor();
+
+                case "5" -> app.atualizarDados();
+
+                case "6" -> app.removerLivro();
+
+                case "7" ->
             }
 
 
@@ -105,10 +126,12 @@ public class App {
     }
 
     public void consultarAutor(){
-        String autor = IO.readln("Entre com o o nome do autor: ");
+        String autor = IO.readln("Entre com o nome do autor: ");
 
-        if (acervo.containsKey(autor)){
-            IO.println(acervo.get(autor));
+        for (Livro livro : acervo.values()) {
+            if (livro.getAutor().equals(autor)){
+                IO.println(livro);
+            }
         }
     }
 
@@ -120,21 +143,32 @@ public class App {
             IO.println("Livro não encontrado");
         }
         else {
-            int opcao = 0;
+            String opcao = IO.readln("""
+                    1 - Alterar titulo
+                    2 - Alterar autor
+                    3 - Alterar ano de lançamento
+                    Selecione a opção: 
+                    """);
             switch (opcao){
-                case 1 -> j.setTitulo(IO.readln("Insira o novo título: "));
+                case "1" -> j.setTitulo(IO.readln("Insira o novo título: "));
 
-                case 2 -> j.setAutor(IO.readln("Insira o novo autor: "));
+                case "2" -> j.setAutor(IO.readln("Insira o novo autor: "));
 
-                case 3 -> j.setAno(Integer.parseInt(IO.readln("Insira o novo ano: ")));
+                case "3" -> j.setAno(Integer.parseInt(IO.readln("Insira o novo ano: ")));
 
             }
         }
     }
 
     public void removerLivro(){
-        String iSBN = IO.readln("Entre com o iSBN: ");
-        Livro p = acervo.get(iSBN);
-        acervo.remove(p);
+        String iSBN = IO.readln("Entre com o iSBN para remover: ");
+        if (acervo.containsKey(iSBN)) {
+            Livro p = acervo.get(iSBN);
+            acervo.remove(p);
+            IO.println("Livro " + iSBN + " removido da livraria");
+        }
+        else{
+            IO.println("Livro não encontrado");
+        }
     }
 }
