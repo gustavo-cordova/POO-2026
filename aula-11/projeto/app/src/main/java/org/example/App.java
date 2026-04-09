@@ -24,13 +24,13 @@ public class App {
 
         // TODO implementar switch case
 
-        String n = IO.readln("Entre com o nome do titular: ");
-        String num = IO.readln("Entre com o numero da conta: ");
-        double s = Double.parseDouble(IO.readln("Entre com o saldo: "));
+        String nome = IO.readln("Entre com o nome do titular: ");
+        String numero = IO.readln("Entre com o numero da conta: ");
+        double saldo = Double.parseDouble(IO.readln("Entre com o saldo: "));
 
        switch (op) {
            case 1 -> {
-               Conta c = new Conta(n, num, s);
+               Conta c = new Conta(nome, numero, 0);
                contas.add(c);
            }
            case 2 -> {
@@ -39,8 +39,8 @@ public class App {
            case 3 -> {
                contas.forEach(elemento ->{
                     for (Conta c : this.contas) {
-                        if (elemento.getNumero().equals(num)) {
-                            elemento.depositar(s);
+                        if (elemento.getNumero().equals(numero)) {
+                            elemento.depositar(saldo);
                             break;
                         }
                     }});
@@ -48,8 +48,8 @@ public class App {
            case 4 -> {
                contas.forEach(elemento ->{
                    for (Conta c : this.contas) {
-                       if (elemento.getNumero().equals(num)){
-                       elemento.sacar(s);
+                       if (elemento.getNumero().equals(numero)){
+                       elemento.sacar(saldo);
                    }
                }});
            }
@@ -123,4 +123,45 @@ public class App {
         app.menu(1);
 
     }
+
+    public void criarConta(){
+        String nome = IO.readln("Entre com o nome do titular: ");
+        String numero = IO.readln("Entre com o numero da conta: ");
+        double saldo = 0;
+
+        if(!contas.contains(numero)) {
+            Conta conta = new Conta(nome, numero, 0);
+            contas.add(conta);
+            IO.println("Conta criada. Saldo = R$0,00 ");
+        }
+        else {
+            IO.println("Conta já existente. Escolha outro número");
+        }
+    }
+
+    public void listarContas(){
+        for (Conta lista : contas){
+            IO.println(lista.toString());
+        }
+    }
+
+    public void depositar(){
+        String numero = IO.readln("Entre com o numero da conta: ");
+
+            for (Conta t : contas){
+                if (t.getNumero().equals(numero)){
+                t.depositar(Double.parseDouble(IO.readln("Valor para depositar: ")));
+                }
+            }
+        }
+
+
+    }
 }
+
+
+
+
+
+
+
