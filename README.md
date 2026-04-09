@@ -29,5 +29,10 @@ Repositório com atividades práticas da disciplina de Programação Orientada a
 
 * [Aula 10](aula-10) - Praticando Java
 
+* [Aula 11](aula-11) - Coleções Java: listas, conjuntos e mapas; for each, lambdas e method reference (Conta Bancária)
+
+* [Aula 12](aula-12) - Coleções Java: listas, conjuntos e mapas; for each, lambdas e method reference (Menu Livraria)
+
+
 
 
