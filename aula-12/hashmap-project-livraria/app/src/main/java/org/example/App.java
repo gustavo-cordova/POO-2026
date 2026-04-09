@@ -59,6 +59,7 @@ public class App {
 
         while (executando) {
             IO.println("""
+                    
                     Menu de Gerenciamento da Livraria
                                         
                     1 - Cadastrar Livro, sem iSBM duplicado
@@ -68,6 +69,7 @@ public class App {
                     5 - Atualizar dados de um livro
                     6 - Remover um livro pelo iSBN
                     7 - Sair
+                    
                     """);
             String opcao = IO.readln("Selecione a opção desejada: ");
 
@@ -105,6 +107,9 @@ public class App {
         if (!acervo.containsKey(iSBN)){
             acervo.put(iSBN, new Livro(iSBN, titulo, autor, ano));
         }
+        else{
+            IO.println("iSBN " + iSBN + " já existente");
+        }
     }
 
     public void listar(){
@@ -127,6 +132,9 @@ public class App {
             IO.println("Nome do autor: " + l.getAutor());
             IO.println("Ano de publicação: " + l.getAno());
         }
+        else {
+            IO.println("Livro não encontrado");
+        }
     }
 
     public void consultarAutor(){
@@ -135,6 +143,9 @@ public class App {
         for (Livro livro : acervo.values()) {
             if (livro.getAutor().equals(autor)){
                 IO.println("iSBN: " + livro.getiSBN() + " / Nome do livro: " + livro.getTitulo() + " / Ano de lançamento: " + livro.getAno());
+            }
+            else{
+                IO.println("Autor não encontrado");
             }
         }
     }
