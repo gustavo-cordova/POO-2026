@@ -5,11 +5,48 @@ package org.example;
 
 import edu.princeton.cs.algs4.Draw;
 
+import java.awt.*;
+import java.util.concurrent.TimeUnit;
+
 public class App {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
+
+        Draw draw = new Draw();
+
+        draw.setXscale(0, 800);
+        draw.setYscale(0, 800);
+        draw.setCanvasSize(800, 800);
+
+        draw.enableDoubleBuffering();
 
 
+        draw.setPenColor(Color.blue);
+        draw.setFontSize(30);
+
+
+//        draw.circle(400, 400, 200);
+//        draw.filledCircle(300, 300, 200);
+//        draw.square(100, 100, 50);
+//
+//        double [] x = {100, 300, 500, 600};
+//        double [] y = {100, 300, 300, 100};
+//        draw.polygon(x,y);
+
+        for (int i = 0; i < 10; i++) {
+            draw.clear();
+            draw.text(400, 400, "" + i);
+            draw.show();
+            TimeUnit.SECONDS.sleep(1);
+        }
+
+        draw.setPenColor(Color.lightGray);
+        for (int i = 0; i < 800; i+=50) {
+
+            draw.line(i,0,i,800);
+            draw.line(0, i,800,i);
+        }
+        draw.show();
 
     }
 }
