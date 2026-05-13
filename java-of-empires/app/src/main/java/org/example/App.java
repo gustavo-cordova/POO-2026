@@ -7,16 +7,15 @@ public class App {
 
     public static void main(String[] args) {
 
-        Aldeao aldeao = new Aldeao();
-        IO.println(aldeao.atacar());
-        IO.println(aldeao.mover());
+        Personagem[] personagens = new Personagem[3];
+        personagens[0] = new Aldeao();
+        personagens[1] = new Arqueiro();
+        personagens[2] = new Cavaleiro();
 
-        Arqueiro arqueiro = new Arqueiro();
-        IO.println(arqueiro.atacar());
-        IO.println(arqueiro.mover());
+        for (Personagem p : personagens){
+            IO.println(p.mover());
+            IO.println(p.atacar());
 
-        Cavaleiro cavaleiro = new Cavaleiro();
-        IO.println(cavaleiro.atacar());
-        IO.println(cavaleiro.mover());
+        }
     }
 }
