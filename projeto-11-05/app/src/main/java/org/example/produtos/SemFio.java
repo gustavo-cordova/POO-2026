@@ -15,6 +15,10 @@ public class SemFio extends Telefone{
         this.modelo = modelo;
     }
 
+    public double getFrequencia() {
+        return frequencia;
+    }
+
     @Override
     public String toString() {
         return super.toString() +

@@ -102,16 +102,17 @@ classDiagram
         
     }
     
-    class Mamifero{
+    class Corredor{
+        +correr()
         
     }
     
-    class Ave{
-        
+    class Voador{
+        +voar()
     }
     
-    class Peixe{
-        
+    class Nadador{
+        +nadar()
     }
     
     class Gato{
@@ -138,9 +139,15 @@ classDiagram
         
     }
     
-    Animal<|--Mamifero
-    Animal<|--Ave
-    Animal<|--Peixe
+    Animal<|--Corredor
+    Animal<|--Voador
+    Animal<|--Nadador
+    Corredor<|--Gato
+    Corredor<|--Cachorro
+    Nadador<--Baleia
+    Voador<|--Arara
+    Corredor<|--Galinha
+    Nadador<|--Tubarao
     
     
     

@@ -10,12 +10,28 @@ public class App {
 
     public static void main(String[] args) {
 
-        Telefone telefone = new Telefone(10, "233", "A56", 35, new Dimensao(1, 2, 3));
+//        Telefone telefone = new Telefone(10, "233", "A56", 35, new Dimensao(1, 2, 3));
+//
+//        SemFio semfio = new SemFio(45, "455", "S22", 67, new Dimensao(1, 2, 3), 32, 2, 100);
+//
+//
+//        Telefone a = new SemFio(45, "455", "S22", 67, new Dimensao(1, 2, 3), 32, 2, 100);
+//
+//        SemFio b = (SemFio) a;
+//
+//        IO.println(semfio.toString());
 
-        SemFio semfio = new SemFio(45, "455", "S22", 67, new Dimensao(1, 2, 3), 32, 2, 100);
+        Telefone produtos[] = new Telefone[2];
+        produtos[0] = new Telefone(10, "233", "A56", 35, new Dimensao(1, 2, 3));
+        produtos[1] = new SemFio(45, "455", "S22", 67, new Dimensao(1, 2, 3), 32, 2, 100);
 
+        for (Telefone t : produtos){
 
-        IO.println(semfio.toString());
+            if (t instanceof SemFio s){
+                double frequencia = s.getFrequencia();
+                System.out.println("Sem-fio com frequencia: " + frequencia);
+            }
+        }
 
     }
 }
