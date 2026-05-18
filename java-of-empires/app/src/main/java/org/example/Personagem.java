@@ -1,6 +1,6 @@
 package org.example;
 
-public class Personagem {
+public abstract class Personagem {
     private int vida;
     private int ataque;
     private double velocidade;
@@ -11,13 +11,9 @@ public class Personagem {
         this.velocidade=velocidade;
     }
 
-    public String mover(){
-        return "está se movendo";
-    }
+    public abstract String mover();
 
-    public String atacar(){
-        return "está atacando";
-    }
-
+    public abstract String atacar();
 
 }
+

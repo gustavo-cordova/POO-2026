@@ -4,27 +4,22 @@
 classDiagram
     
     class Personagem{
+        <<abstract>>
         -vida: int
         -ataque: int
         -velocidade: int
         +Personagem(int: vida, int: ataque, int: velocidade )
-        +mover() String
-        +atacar() String
+        +mover() String*
+        +atacar() String*
     }
     
     class Aldeao{
-        +caminhar()
-        +socar()
     }
     
     class Arqueiro{
-        +correr()
-        +atirarFlecha()
     }
     
     class Cavaleiro{
-        +cavalgar()
-        +usarEspada()
     }
     
     Personagem<|--Aldeao
