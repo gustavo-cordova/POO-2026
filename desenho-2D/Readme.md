@@ -4,9 +4,10 @@
 classDiagram
     
     class FormasGeomatricas{
+        <<abstract>>
         - corLinha: String
         - inicial: Ponto
-        +desenhar() String
+        +desenhar() String*
     }
     
     class Ponto{
@@ -15,9 +16,10 @@ classDiagram
     }
     
     class FComArea{
+        <<abstract>>
         - corArea: String
-        +calcArea() double
-        +calcPerimetro() double
+        +calcArea() double*
+        +calcPerimetro() double*
     }
     
     class Linha{
