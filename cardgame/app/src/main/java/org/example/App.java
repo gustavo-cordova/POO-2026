@@ -6,6 +6,9 @@ package org.example;
 import edu.princeton.cs.algs4.Draw;
 import edu.princeton.cs.algs4.DrawListener;
 
+import javax.swing.*;
+import java.util.ArrayDeque;
+
 public class App implements DrawListener {
 
     private Draw draw;
@@ -16,12 +19,30 @@ public class App implements DrawListener {
         this.draw.setXscale(0, 1200);
         this.draw.setYscale(0, 600);
         this.draw.enableDoubleBuffering();
-        this.draw.setDefaultCloseOperation(3);
+        this.draw.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.draw.setTitle("jogo de cartas");
         this.draw.addListener(this);
         this.draw.clear(Draw.GREEN);
         this.draw.show();
+
+        this.baralho = new ArrayDeque<>();
+
+
+        CartaGrafica cg = new CartaGrafica(Naipe.COPAS,Valores.AS, 53, 45, true);
+
+        for (Naipe naipe : Naipe.values()){
+            for (Valores valor : Valores.values()){
+                Carta c = new Carta(naipe, valor );
+                baralho.add(carta);
+            }
+        }
+
+        for (Carta c : baralho){
+            c.desenharCarta(this.draw);
+        }
     }
+
+
 
     @Override
     public void mouseClicked(double x, double y) {
@@ -32,6 +53,8 @@ public class App implements DrawListener {
 
     public static void main(String[] args) {
         App app = new App();
+
+
 
     }
 }
