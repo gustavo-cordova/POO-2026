@@ -25,7 +25,7 @@ public class App implements DrawListener {
         this.draw.clear(Draw.GREEN);
         this.draw.show();
 
-        this.baralho = new ArrayDeque<>();
+//        this.baralho = new ArrayDeque<>();
 
 
         CartaGrafica cg = new CartaGrafica(Naipe.COPAS,Valores.AS, 53, 45, true);
@@ -33,13 +33,13 @@ public class App implements DrawListener {
         for (Naipe naipe : Naipe.values()){
             for (Valores valor : Valores.values()){
                 Carta c = new Carta(naipe, valor );
-                baralho.add(carta);
+//                baralho.add(carta);
             }
         }
 
-        for (Carta c : baralho){
-            c.desenharCarta(this.draw);
-        }
+//        for (Carta c : baralho){
+//            c.desenharCarta(this.draw);
+//        }
     }
 
 
@@ -53,6 +53,7 @@ public class App implements DrawListener {
 
     public static void main(String[] args) {
         App app = new App();
+
 
 
 

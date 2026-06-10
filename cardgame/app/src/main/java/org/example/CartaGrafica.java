@@ -5,7 +5,7 @@ import edu.princeton.cs.algs4.Draw;
 import javax.swing.*;
 import java.awt.*;
 
-public class CartaGrafica extends Carta{
+public class CartaGrafica extends Carta implements Elemento{
 
     private boolean praCima;
 //    private String cor;
@@ -31,7 +31,8 @@ public class CartaGrafica extends Carta{
         return false;
     }
 
-    public void desenharCarta (Draw draw){
+    @Override
+    public void desenhar(Draw draw) {
         draw.picture(x, y, "cartas/"+valor.inicial+naipe.incial+".png");
         draw.show();
     }
